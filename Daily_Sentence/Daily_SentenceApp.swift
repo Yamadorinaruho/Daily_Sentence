@@ -1,10 +1,3 @@
-//
-//  Daily_SentenceApp.swift
-//  Daily_Sentence
-//
-//  Created by yamadorinaruho on 2024/05/26.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -15,14 +8,14 @@ struct Daily_SentenceApp: App {
             Item.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
